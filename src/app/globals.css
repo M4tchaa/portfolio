@@ -1,11 +1,12 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --bg-primary: #020909;
   --bg-surface: #0B1414;
   --accent: #1C765C;
   --accent-soft: #2C9C7B;
-  --text-primary: #000000;
+  --text-primary: #ffffff;
   --text-muted: #8FA6A0;
   --border-subtle: #12302A;
 }
@@ -13,4 +14,12 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
 }

@@ -18,3 +18,15 @@ export function getProjects() {
     };
   });
 }
+
+export function getProjectBySlug(slug: string) {
+  const filePath = path.join(projectsDirectory, `${slug}.mdx`);
+  const fileContents = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  return {
+    slug,
+    content,
+    ...data,
+  };
+}
