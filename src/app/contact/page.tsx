@@ -3,6 +3,7 @@ import CopyEmail from "@/components/CopyEmail";
 
 const availabilityStyles: Record<string, { dot: string; text: string; label: string; sub: string }> = {
   open: { dot: "bg-[var(--accent)] shadow-[0_0_6px_var(--accent)]", text: "text-[var(--accent-soft)]", label: "Open to work", sub: "Available for freelance & remote roles" },
+  openFreelance: { dot: "bg-green-500 shadow-[0_0_6px_green-500]", text: "text-green-500", label: "Open to freelance Project", sub: "Available for freelance projects" },
   busy: { dot: "bg-yellow-500", text: "text-yellow-500", label: "Limited availability", sub: "Taking select projects only" },
   closed: { dot: "bg-[var(--text-muted)]", text: "text-[var(--text-muted)]", label: "Not available", sub: "Not taking new projects right now" },
 };
@@ -24,7 +25,6 @@ export default function ContactPage() {
       </h2>
       <p className="text-sm text-[var(--text-muted)] mt-4 mb-12 leading-relaxed">
         Have a project in mind or want to collaborate? I'd love to hear from you.
-        I usually reply within 24 hours.
       </p>
 
       {/* Availability */}

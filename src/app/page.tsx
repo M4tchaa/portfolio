@@ -4,6 +4,7 @@ import { getFeaturedProjects } from "@/lib/projects";
 
 const availabilityStyles: Record<string, { dot: string; text: string; label: string }> = {
   open: { dot: "bg-[var(--accent)] shadow-[0_0_6px_var(--accent)]", text: "text-[var(--accent-soft)]", label: "Open to work" },
+  openFreelance: { dot: "bg-green-500 shadow-[0_0_6px_green-500]", text: "text-green-500", label: "Open to freelance Project" },
   busy: { dot: "bg-yellow-500", text: "text-yellow-500", label: "Limited availability" },
   closed: { dot: "bg-[var(--text-muted)]", text: "text-[var(--text-muted)]", label: "Not available" },
 };

@@ -5,6 +5,9 @@ import PageTransition from "@/components/PageTransition";
 export const metadata = {
   title: "Arliyandi | Portfolio",
   description: "Fullstack Web Developer",
+  icons: {
+    icon: "/public/vercel.svg",
+  },
 };
 
 export default function RootLayout({
