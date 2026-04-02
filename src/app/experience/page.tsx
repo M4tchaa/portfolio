@@ -27,10 +27,10 @@ export default function ExperiencePage() {
       </p>
 
       {/* Stack sections */}
-      <div className="border-t border-[var(--border-subtle)] pt-10 mb-14 space-y-8">
+      <div className="border-t border-[var(--border-subtle)] pt-10 mb-14 space-y-6">
         {Object.entries(experienceData.stacks).map(([category, items]) => (
-          <div key={category} className="grid grid-cols-[140px_1fr] gap-4 items-start">
-            <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--text-muted)] pt-1">
+          <div key={category} className="flex flex-col gap-3">
+            <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--text-muted)]">
               {category}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -55,20 +55,21 @@ export default function ExperiencePage() {
 
         <div className="space-y-0">
           {experienceData.journey.map((entry: any, i: number) => (
-            <div key={i} className="grid grid-cols-[140px_1fr] gap-6 group">
+            <div key={i} className="flex flex-col md:grid md:grid-cols-[140px_1fr] gap-2 md:gap-6 group">
 
-              {/* Left: year + line */}
-              <div className="relative pt-1">
-                <p className="font-mono text-[10px] text-[var(--text-muted)] tracking-wide leading-relaxed">
+              {/* Year */}
+              <div className="relative md:pt-1">
+                <p className="font-mono text-[10px] text-[var(--accent)] tracking-wide">
                   {entry.year}
                 </p>
+                {/* Timeline line — desktop only */}
                 {i < experienceData.journey.length - 1 && (
-                  <div className="absolute left-0 top-6 bottom-0 w-px bg-[var(--border-subtle)]" />
+                  <div className="hidden md:block absolute left-0 top-6 bottom-0 w-px bg-[var(--border-subtle)]" />
                 )}
               </div>
 
-              {/* Right: content */}
-              <div className="pb-10">
+              {/* Content */}
+              <div className="pb-10 border-l border-[var(--border-subtle)] pl-4 md:border-none md:pl-0">
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <h3 className="text-base font-medium text-white">{entry.role}</h3>
                   <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${typeStyles[entry.type] ?? typeStyles.onsite}`}>
