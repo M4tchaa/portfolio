@@ -1,5 +1,6 @@
 import "./globals.css";
-import Link from "next/link";
+import NavLinks from "@/components/NavLinks";
+import PageTransition from "@/components/PageTransition";
 
 export const metadata = {
   title: "Arliyandi | Portfolio",
@@ -25,20 +26,7 @@ export default function RootLayout({
                 Fullstack Web Developer
               </p>
 
-              <nav className="mt-12 space-y-4 text-sm">
-                <Link href="/" className="block hover:text-[var(--accent)]">
-                  Home
-                </Link>
-                <Link href="/projects" className="block hover:text-[var(--accent)]">
-                  Projects
-                </Link>
-                <Link href="/experience" className="block hover:text-[var(--accent)]">
-                  Experience
-                </Link>
-                <Link href="/contact" className="block hover:text-[var(--accent)]">
-                  Contact
-                </Link>
-              </nav>
+              <NavLinks />
             </div>
 
             <div className="text-xs text-[var(--text-muted)]">
@@ -48,7 +36,9 @@ export default function RootLayout({
 
           {/* Main Content */}
           <main className="flex-1 p-8 md:p-16">
-            {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           </main>
         </div>
       </body>
