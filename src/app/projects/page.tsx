@@ -11,10 +11,16 @@ export default function ProjectsPage() {
   const projects = getProjects();
 
   return (
-    <div>
-      <h2 className="text-2xl font-semibold tracking-tight mb-2">Projects</h2>
-      <p className="text-[var(--text-muted)] text-sm mb-12">
-        Things I've built and shipped.
+    <div className="max-w-2xl">
+      <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--accent)] mb-4">
+        Projects
+      </p>
+      <h2 className="text-4xl font-semibold tracking-tight leading-none mb-3">
+        Things I've built<br />
+        <span className="text-[var(--text-muted)] font-light">and shipped.</span>
+      </h2>
+      <p className="text-sm text-[var(--text-muted)] mt-4 mb-14 leading-relaxed">
+        A collection of web apps, ML systems, and experiments.
       </p>
 
       <div className="grid gap-4">
