@@ -32,8 +32,8 @@ export default function RootLayout({
                 <Link href="/projects" className="block hover:text-[var(--accent)]">
                   Projects
                 </Link>
-                <Link href="/about" className="block hover:text-[var(--accent)]">
-                  About
+                <Link href="/experience" className="block hover:text-[var(--accent)]">
+                  Experience
                 </Link>
                 <Link href="/contact" className="block hover:text-[var(--accent)]">
                   Contact
