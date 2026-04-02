@@ -19,6 +19,10 @@ export function getProjects() {
   });
 }
 
+export function getFeaturedProjects() {
+  return getProjects().filter((p: any) => p.featured === true);
+}
+
 export function getProjectBySlug(slug: string) {
   const filePath = path.join(projectsDirectory, `${slug}.mdx`);
   const fileContents = fs.readFileSync(filePath, "utf8");
