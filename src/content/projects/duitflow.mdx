@@ -1,21 +1,23 @@
 ---
-title: "Tick"
-description: "A Countdown Timer Optimized for Event Organizers"
-date: "2026-06-01"
+title: "DuitFlow"
+description: "Personal Finance Management App with Google OAuth Authentication"
+date: "2026-07-01"
 mainstack: ["Next.js"]
-stack: ["Next.js"]
+stack: ["Next.js", "NestJS", "PostgreSQL", "Google OAuth", "JWT"]
 role: "Fullstack Developer"
 status: "live"
-url: "https://tick.itsmatcha.vip"
+url: "duitflow.itsmatcha.vip"
 featured: true
 ---
 
 # Overview
 
-Tick is a countdown timer application designed specifically for event organizers and timekeepers. It provides customizable timer scenes, automated scene transitions, and cue notes to help presenters and event crews manage sessions more efficiently during live events.
+DuitFlow is a personal finance management application that helps users track income and expenses, manage budgets, and generate financial reports. It supports secure authentication via Google OAuth, allowing users to sign in without managing separate credentials.
 
 # Architecture
 
-* Next.js Web UI for the user interface
-* Multi-scene timer management system
-* Automated scene switching and cue note support
+* NestJS REST API backend with versioned endpoints (`/api/v1`)
+* PostgreSQL as the primary relational database
+* Google OAuth 2.0 for authentication, combined with JWT for session/token management
+* Next.js web UI for the user interface
+* Environment-based configuration for local development and production deployment
